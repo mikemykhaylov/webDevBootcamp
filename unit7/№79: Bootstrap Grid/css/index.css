@@ -1,0 +1,8 @@
+.pink {
+  background-color: pink;
+  border: 1px solid purple;
+}
+.orange {
+  background-color: orange;
+  border: 1px dashed red;
+}
