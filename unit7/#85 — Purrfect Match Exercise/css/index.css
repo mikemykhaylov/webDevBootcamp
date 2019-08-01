@@ -2,7 +2,7 @@ body {
   background: url(https://unsplash.com/photos/xulIYVIbYIc/download?force=true);
   background-size: cover;
   background-position-y: 25%;
-  font-family: 'Lato';
+  font-family: "Lato";
   color: white;
   height: 100vh;
 }
@@ -19,8 +19,7 @@ h1 {
 
 h1,
 h3 {
-  text-shadow: 0px 4px 3px #00000066,
-   0px 8px 13px #0000001a,
+  text-shadow: 0px 4px 3px #00000066, 0px 8px 13px #0000001a,
     0px 18px 23px #0000001a;
 }
 

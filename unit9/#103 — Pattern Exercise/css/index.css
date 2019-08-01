@@ -1,0 +1,16 @@
+#main-pattern {
+  background: url(../images/header.jpeg) center center / cover;
+}
+
+.img-container {
+  overflow: hidden;
+}
+
+.card-img {
+  transition: all 200ms ease;
+  overflow: hidden;
+}
+
+.card-img:hover {
+  transform: scale(1.25);
+}
