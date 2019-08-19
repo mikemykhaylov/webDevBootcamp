@@ -1,16 +1,13 @@
 body {
-  font-family: "Nunito";
   background-color: #f5d9d5;
+  font-family: 'Nunito';
 }
-
 #navbar {
   transition-duration: 200ms;
 }
-
 .navbar-scrolled {
   background-color: #dec0de !important;
 }
-
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -18,54 +15,42 @@ body {
 .navbar-dark .navbar-brand:hover {
   color: #ea1c2c;
 }
-
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-brand {
-  font-weight: 200;
   font-size: 1.5rem;
+  font-weight: 200;
 }
-
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
-}
-
-.navbar-dark .navbar-nav .nav-link {
   transition-duration: 200ms;
 }
-
 #headingGroup {
   height: 100%;
 }
-
 #headingGroup h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
   font-weight: 200;
   text-transform: uppercase;
-  font-size: 3.5rem;
-  color: #ffffff;
 }
-
 #headingGroup span {
   color: #ea1c2c;
 }
-
 .textGroup {
   height: 100%;
 }
-
 .textGroup h2 {
-  font-size: 2.5rem;
   color: #ea1c2c;
+  font-size: 2.5rem;
   font-weight: 200;
   text-transform: uppercase;
 }
-
 .textGroup p {
   color: #f498b8;
-  font-weight: 200;
   font-size: 1.125rem;
+  font-weight: 200;
   line-height: 2;
 }
-
 @media (max-width: 1200px) {
   #headingGroup h1 {
     font-size: 2.75rem;
@@ -77,7 +62,6 @@ body {
     font-size: 1rem;
   }
 }
-
 @media (max-width: 767px) {
   .textGroup {
     margin: 3rem 0;

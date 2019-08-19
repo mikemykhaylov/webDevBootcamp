@@ -1,6 +1,4 @@
-$(function() {
-  $(document).scroll(function() {
-    let $nav = $("#navbar");
-    $nav.toggleClass("navbar-scrolled", $(this).scrollTop() > $nav.height());
-  });
+$(document).scroll(function navbarToggle() {
+  const $nav = $('#navbar');
+  $nav.toggleClass('navbar-scrolled', $(this).scrollTop() > $nav.height());
 });

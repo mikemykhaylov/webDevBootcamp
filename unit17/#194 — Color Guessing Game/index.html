@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
+    rel="stylesheet">
+  <title>Color Guessing Game</title>
+</head>
+
+<body>
+  <header>
+    <div class="container page-header">
+      <h2 class="gameIntro">The Great</h2>
+      <h1 id="currentColor"></h1>
+      <h2 class="gameIntro">Guessing Game</h2>
+    </div>
+  </header>
+  <nav>
+    <div class="container controls">
+      <div class="navWrapper resetWrap">
+        <h3 id="reset">New Colors</h3>
+      </div>
+      <div class="navWrapper statusWrap">
+        <h4 id="status"></h4>
+      </div>
+      <div class="navWrapper diffWrap">
+        <div class="diffBox">
+          <h3><a href="#" id="easy" class="diffLinks">Easy</a></h3>
+        </div>
+        <div class="diffBox activeDiff">
+          <h3><a href="#" id="hard" class="diffLinks activeLink">Hard</a></h3>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container options">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </div>
+  </main>
+
+  <script src="./js/index.js"></script>
+
+</body>
+
+</html>

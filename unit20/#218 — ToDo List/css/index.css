@@ -1,0 +1,100 @@
+body {
+  background: linear-gradient(to right, rgb(96, 228, 238) 0%, rgb(199, 204, 125) 100%);
+  font-family: 'Lato';
+  font-size: 16px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+h1,
+h3 {
+  margin: 0;
+}
+.container {
+  box-sizing: border-box;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15vh 15px;
+  width: 100%;
+}
+.toDoWrap {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+nav {
+  align-items: center;
+  background-color: #2e94b9;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: white;
+  display: flex;
+  font-size: 1.5rem;
+  height: 60px;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+#header {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+#addToDo {
+  background-color: #f0f0f0;
+  border: none;
+  color: #39bae8;
+  font-size: 1.25rem;
+  height: 60px;
+  margin: 0;
+  padding: 0 20px;
+}
+#addToDo:focus {
+  outline: none;
+}
+.toDoItemWrap {
+  align-items: stretch;
+  display: flex;
+  height: 60px;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.toDoItemWrap:hover .delBtn {
+  width: 60px;
+}
+.delBtn {
+  align-items: center;
+  background-color: #eb4949;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 150ms;
+  width: 0px;
+}
+.toDoItem {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 20px;
+  width: calc(100% - 60px);
+}
+.odd {
+  background-color: #ffffff;
+}
+.even {
+  background-color: #f0f0f0;
+}
+.done {
+  color: #b4b4b4;
+  text-decoration: line-through;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
