@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+
+<div class="ui text segment container main">
+  <h1 class="ui huge header"> <%= result.title %>
+    <div class="sub header"><%= result.dateCreated.toDateString() %></div>
+  </h1>
+  <img class="ui image fluid rounded" src="<%= result.img %>" />
+  <p>
+    <%- result.body %>
+  </p>
+  <div class="ui grid">
+    <form class="ui form two wide column" action="/blogs/<%= result._id %>/edit"
+      method="GET">
+      <button class="ui orange button" type="submit">Edit</button>
+    </form>
+    <form class="ui form two wide column"
+      action="/blogs/<%= result._id %>?_method=DELETE" method="POST">
+      <button class="ui negative button" type="submit">Delete</button>
+    </form>
+  </div>
+</div>
+
+<% include ./partials/footer %>

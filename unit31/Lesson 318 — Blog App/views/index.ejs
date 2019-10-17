@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+
+<div class="ui container main">
+  <h1 class="ui huge header">View All The Newest Blogs</h1>
+  <div class="ui three cards">
+
+    <% result.forEach(blog => { %>
+
+    <div class="ui card">
+      <div class="image">
+        <img src=" <%= blog.img %> ">
+      </div>
+      <div class="content">
+        <a class="header"><%= blog.title %></a>
+        <div class="meta">
+          <span class="date"><%= blog.dateCreated.toDateString() %></span>
+        </div>
+        <div class="description">
+          <%= blog.body.substring(0, 100) + '...' %>
+        </div>
+      </div>
+      <div class="extra content">
+        <a class="ui primary button" href="/blogs/<%= blog._id %>">Read</a>
+      </div>
+    </div>
+
+    <% }) %>
+
+  </div>
+</div>
+
+<% include ./partials/footer %>

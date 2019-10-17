@@ -2,7 +2,7 @@ function getRandomColor() {
   const r = Math.floor(Math.random() * 255).toString(16);
   const g = Math.floor(Math.random() * 255).toString(16);
   const b = Math.floor(Math.random() * 255).toString(16);
-  return '#'+r+g+b;
+  return `#${r}${g}${b}`;
 }
 
 function Initialise() {
@@ -34,10 +34,22 @@ function Initialise() {
   status.textContent = '';
 }
 
+function showWin() {
+  const header = document.querySelector('header');
+  const currentColor = document.querySelector('div[data-correct="true"]').style.backgroundColor;
+  const allOptions = document.querySelectorAll('.color');
+  const status = document.querySelector('#status');
+  header.style.backgroundColor = currentColor;
+  status.textContent = 'You`ve Won!';
+  allOptions.forEach(option => {
+    option.style.backgroundColor = currentColor;
+  });
+}
+
 function acceptAnswer() {
   const allOptions = document.querySelectorAll('.color');
   const status = document.querySelector('#status');
-  allOptions.forEach((option) => {
+  allOptions.forEach(option => {
     option.addEventListener('click', () => {
       if (option.dataset.correct !== 'true') {
         option.style.backgroundColor = '#232323';
@@ -46,18 +58,6 @@ function acceptAnswer() {
         showWin();
       }
     });
-  });
-}
-
-function showWin() {
-  const header = document.querySelector('header');
-  const currentColor = document.querySelector('div[data-correct="true"]').style.backgroundColor;
-  const allOptions = document.querySelectorAll('.color');
-  const status = document.querySelector('#status');
-  header.style.backgroundColor = currentColor;
-  status.textContent = 'You`ve Won!';
-  allOptions.forEach((option) => {
-    option.style.backgroundColor = currentColor;
   });
 }
 
