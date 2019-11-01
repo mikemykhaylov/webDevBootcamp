@@ -48,7 +48,7 @@ function deleteToDo() {
 }
 
 function addToDo() {
-  $('#addToDo').keypress(key => {
+  $('#addToDo').keypress((key) => {
     const toDoMarkup = `<div class="toDoItemWrap">
       <div class="delBtn"><i class="fas fa-trash"></i></div>
       <div class="toDoItem">

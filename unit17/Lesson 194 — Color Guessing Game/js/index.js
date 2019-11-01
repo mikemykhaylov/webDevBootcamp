@@ -41,7 +41,7 @@ function showWin() {
   const status = document.querySelector('#status');
   header.style.backgroundColor = currentColor;
   status.textContent = 'You`ve Won!';
-  allOptions.forEach(option => {
+  allOptions.forEach((option) => {
     option.style.backgroundColor = currentColor;
   });
 }
@@ -49,7 +49,7 @@ function showWin() {
 function acceptAnswer() {
   const allOptions = document.querySelectorAll('.color');
   const status = document.querySelector('#status');
-  allOptions.forEach(option => {
+  allOptions.forEach((option) => {
     option.addEventListener('click', () => {
       if (option.dataset.correct !== 'true') {
         option.style.backgroundColor = '#232323';

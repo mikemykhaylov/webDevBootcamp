@@ -23,12 +23,12 @@ app.post('/searching', (req, res) => {
 
 app.get('/results', (req, res) => {
   request(`http://www.omdbapi.com/?apikey=thewdb&s=${searchPhrase}`)
-    .then(body => {
+    .then((body) => {
       const parsedBody = JSON.parse(body).Search;
       res.render('results', { parsedBody });
       searchPhrase = '';
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(`Error: ${err.statusCode}`);
       searchPhrase = '';
     });

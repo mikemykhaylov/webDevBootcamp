@@ -85,7 +85,7 @@ app.get('/blogs/:id/edit', (req, res) => {
 });
 
 app.delete('/blogs/:id', (req, res) => {
-  blogModel.findByIdAndRemove(req.params.id, err => {
+  blogModel.findByIdAndRemove(req.params.id, (err) => {
     if (err) {
       res.redirect('/blogs');
     } else {

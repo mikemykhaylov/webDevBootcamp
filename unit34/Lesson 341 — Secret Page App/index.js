@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 const passport = require('passport');
 
-const localStrategy = require('passport-local');
+const LocalStrategy = require('passport-local');
 
 const passportLocalMongoose = require('passport-local-mongoose');
 
@@ -38,7 +38,7 @@ app.use(passport.initialize());
 
 app.use(passport.session());
 
-passport.use(new localStrategy(User.authenticate()));
+passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
