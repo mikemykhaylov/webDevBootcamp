@@ -1,4 +1,4 @@
-var keyData = {
+const keyData = {
   a: {
     color: '#f1c40f',
     sound: new Howl({
@@ -156,26 +156,29 @@ var keyData = {
     }),
   },
 };
+const canvas = document.querySelector('#myCanvas');
+paper.setup(canvas);
 
-var circles = [];
-function onKeyDown(event) {
+const circles = [];
+paper.view.onKeyDown = (event) => {
   if (keyData[event.key]) {
-    var maxPoint = new Point(view.size.width, view.size.height);
-    var ranPoint = Point.random();
-    var point = maxPoint * ranPoint;
-    var newCircle = new Path.Circle(point, 500);
+    const maxPoint = new paper.Point(paper.view.size.width, paper.view.size.height);
+    const ranPoint = paper.Point.random();
+    const point = maxPoint.multiply(ranPoint);
+    const newCircle = new paper.Path.Circle(point, 500);
     newCircle.fillColor = keyData[event.key].color;
     keyData[event.key].sound.play();
     circles.push(newCircle);
   }
-}
-function onFrame() {
-  for (var i = 0; i < circles.length; i++) {
+};
+paper.view.onFrame = () => {
+  for (let i = 0; i < circles.length; i += 1) {
     circles[i].fillColor.hue += 1;
     circles[i].scale(0.9);
     if (circles[i].area < 1) {
       circles[i].remove(); // remove the circle from the canvas
       circles.splice(i, 1); // remove the circle from the array
     }
+    paper.view.draw();
   }
-}
+};
