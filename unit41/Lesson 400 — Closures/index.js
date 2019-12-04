@@ -10,7 +10,7 @@ console.log('outer(5)(5): ', outer(5)(5));
 
 function counter() {
   let count = 0;
-  return function () {
+  return () => {
     count += 1;
     return count;
   };

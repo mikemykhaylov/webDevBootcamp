@@ -4,13 +4,13 @@ function Vehicle(make, model, year) {
   this.year = year;
   this.isRunning = false;
 }
-Vehicle.prototype.turnOn = function () {
+Vehicle.prototype.turnOn = () => {
   this.isRunning = true;
 };
-Vehicle.prototype.turnOff = function () {
+Vehicle.prototype.turnOff = () => {
   this.isRunning = false;
 };
-Vehicle.prototype.Beep = function () {
+Vehicle.prototype.Beep = () => {
   if (this.isRunning) {
     return 'Beep!';
   }
