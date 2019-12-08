@@ -1,9 +1,13 @@
 const mike = {
   firstName: 'Mike',
   sayHi() {
-    setTimeout(() => {
-      console.log(`Hi, ${this.firstName}`);
-    }, 1000);
+    setTimeout(
+      // Bind is needed only with anonymous function, not needed with arrow one
+      () => {
+        console.log(`Hi, ${this.firstName}`);
+      },
+      1000,
+    );
   },
 };
 
