@@ -4,7 +4,6 @@ function Person(firstName, lastName) {
 }
 
 Person('John', 'Smith');
-// eslint-disable-next-line no-undef
-console.log(firstName);
+console.log(this.firstName);
 const mike = new Person('Mike', 'Mykhaylov');
 console.log(mike.firstName);
